@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyDemos", "StudyDemos\StudyDemos.csproj", "{BB74613E-4030-47A3-B8EC-A4B795633276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeShopCRM", "CoffeShopCRM\CoffeShopCRM.csproj", "{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB74613E-4030-47A3-B8EC-A4B795633276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB74613E-4030-47A3-B8EC-A4B795633276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB74613E-4030-47A3-B8EC-A4B795633276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB74613E-4030-47A3-B8EC-A4B795633276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A5197F8-9C06-49CA-AE60-3A06D26A5842}
+	EndGlobalSection
+EndGlobal
