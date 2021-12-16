@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace CoffeShopCRM.Abstract
 {
-    public class BaseCustomerManager : ICustomerService
+    public interface ICustomerCheckService
     {
-        public virtual void Save(Customer customer)
-        {
-            Console.WriteLine("Saved To DB:" + customer.FisrtName);
-        }
+        bool CheckIfRealPerson(Customer customer);
     }
 }

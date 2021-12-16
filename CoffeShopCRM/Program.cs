@@ -1,4 +1,5 @@
 ﻿using CoffeShopCRM.Abstract;
+using CoffeShopCRM.Adapters;
 using CoffeShopCRM.Concrete;
 using CoffeShopCRM.Entities;
 using System;
@@ -13,13 +14,11 @@ namespace CoffeShopCRM
     {
         static void Main(string[] args)
         {
-            BaseCustomerManager customerManager = new NerdCustomerManager();
-            customerManager.Save(new Customer)
-
-
-
+            BaseCustomerManager customerManager = new StarbuckdCustomerManager(new MernisServiceAdapter());
+            customerManager.Save(new Customer { DateOfBirth = 1982, FisrtName = "Umit", LastName = "Akbas", NationalityId = 12345, Id = 5 });
+            Console.ReadLine();
         }
 
-
+       
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CoffeShopCRM.Abstract;
+using CoffeShopCRM.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace CoffeShopCRM.Concrete
 {
-    public class NerdCustomerManager:BaseCustomerManager
-
+    public class CustomerCheckManager : ICustomerCheckService
     {
+        public bool CheckIfRealPerson(Customer customer)
+        {
+            return true;
+        }
     }
 }
