@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoffeShopCRM.Concrete
 {
-    public class StarbuckdCustomerManager : BaseCustomerManager
+    public class NerdCustomerManager : BaseCustomerManager
 
     {
     }

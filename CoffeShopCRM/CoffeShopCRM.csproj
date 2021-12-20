@@ -51,7 +51,7 @@
     <Compile Include="Abstract\ICustomerCheckService.cs" />
     <Compile Include="Adapters\MernisServiceAdapter.cs" />
     <Compile Include="Concrete\CustomerCheckManager.cs" />
-    <Compile Include="Concrete\StarbuckdCustomerManager1.cs" />
+    <Compile Include="Concrete\NerdCustomerManager1.cs" />
     <Compile Include="Concrete\StarbuckdCustomerManager.cs" />
     <Compile Include="Connected Services\MernisServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
