@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyDemos", "StudyDemos\St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeShopCRM", "CoffeShopCRM\CoffeShopCRM.csproj", "{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQProject", "LINQ\LINQProject.csproj", "{4B029375-F89E-4E4D-B2B6-92B9D11F9A26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE713CE9-D6C6-4F8D-A8BE-964D43ADF8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B029375-F89E-4E4D-B2B6-92B9D11F9A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B029375-F89E-4E4D-B2B6-92B9D11F9A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B029375-F89E-4E4D-B2B6-92B9D11F9A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B029375-F89E-4E4D-B2B6-92B9D11F9A26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
