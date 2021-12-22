@@ -16,7 +16,7 @@ namespace LINQ
             List<Product> products = new List<Product>
             {
                 new Product{ProductId=1,CategoryId=1, ProductName="Acer Laptop", QuantityPerUnit="32GbRam",UnitPrice=10000,UnitsInStock=5},
-                new Product{ProductId=1,CategoryId=1, ProductName="Acer Laptop", QuantityPerUnit="16GbRam",UnitPrice=8000,UnitsInStock=3},
+                new Product{ProductId=1,CategoryId=1, ProductName="Acsus Laptop", QuantityPerUnit="16GbRam",UnitPrice=8000,UnitsInStock=3},
                 new Product{ProductId=1,CategoryId=1, ProductName="Hp Laptop", QuantityPerUnit="8GbRam",UnitPrice=6000,UnitsInStock=2},
                 new Product{ProductId=2,CategoryId=1, ProductName="Samsung", QuantityPerUnit="4GbRam",UnitPrice=5000,UnitsInStock=5},
                 new Product{ProductId=2,CategoryId=1, ProductName="Apple", QuantityPerUnit="4GbRam",UnitPrice=8000,UnitsInStock=0},
@@ -25,30 +25,82 @@ namespace LINQ
 
             };
 
-            Console.WriteLine("Algorithmic..............");
+            //Test(products);
 
-            foreach (var product in products)
-            {
-                if (product.UnitPrice>5000 && product.UnitsInStock>3)
-                {
-                    Console.WriteLine(product.ProductName);
-                }        
-                     
+            //GetProducts(products);
 
-            }
+            //AnyTest(products);
 
-            Console.WriteLine("Linq..............");
+            //FindTest(products);
 
-            var result = products.Where(p => p.UnitPrice > 5000&& p.UnitsInStock>3);
+            //FindAllTest(products);
 
+            //AscDescTest(products);
+
+            var result = from p in products
+                         where p.UnitPrice > 6000
+                         orderby p.UnitPrice descending, p.ProductName ascending
+                         select p;
             foreach (var product in result)
             {
                 Console.WriteLine(product.ProductName);
             }
 
-            GetProducts(products); 
+
         }
-        
+
+        private static void AscDascTest(List<Product> products)
+        {
+            var result = products.Where(p => p.ProductName.Contains("top")).OrderByDescending(p => p.UnitPrice).ThenByDescending(p => p.ProductName);
+
+            foreach (var product in result)
+            {
+                Console.WriteLine(product.ProductName);
+            }
+        }
+
+        private static void FindAllTest(List<Product> products)
+        {
+            var result = products.FindAll(p => p.ProductName.Contains("top"));
+            Console.WriteLine(result);
+        }
+
+        private static void FindTest(List<Product> products)
+        {
+            var result = products.Find(p => p.ProductId == 1);
+            Console.WriteLine(result);
+        }
+
+        private static void AnyTest(List<Product> products)
+        {
+            var result = products.Any(p => p.ProductName == "Acer Laptop");
+            Console.WriteLine(result);
+        }
+
+        private static void Test(List<Product> products)
+        {
+            Console.WriteLine("Algorithmic..............");
+
+            foreach (var product in products)
+            {
+                if (product.UnitPrice > 5000 && product.UnitsInStock > 3)
+                {
+                    Console.WriteLine(product.ProductName);
+                }
+
+
+            }
+
+            Console.WriteLine("Linq..............");
+
+            var result = products.Where(p => p.UnitPrice > 5000 && p.UnitsInStock > 3);
+
+            foreach (var product in result)
+            {
+                Console.WriteLine(product.ProductName);
+            }
+        }
+
         static List<Product> GetProducts(List<Product>products)   
         {
 
