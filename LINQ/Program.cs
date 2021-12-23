@@ -18,8 +18,8 @@ namespace LINQ
                 new Product{ProductId=1,CategoryId=1, ProductName="Acer Laptop", QuantityPerUnit="32GbRam",UnitPrice=10000,UnitsInStock=5},
                 new Product{ProductId=1,CategoryId=1, ProductName="Acsus Laptop", QuantityPerUnit="16GbRam",UnitPrice=8000,UnitsInStock=3},
                 new Product{ProductId=1,CategoryId=1, ProductName="Hp Laptop", QuantityPerUnit="8GbRam",UnitPrice=6000,UnitsInStock=2},
-                new Product{ProductId=2,CategoryId=1, ProductName="Samsung", QuantityPerUnit="4GbRam",UnitPrice=5000,UnitsInStock=5},
-                new Product{ProductId=2,CategoryId=1, ProductName="Apple", QuantityPerUnit="4GbRam",UnitPrice=8000,UnitsInStock=0},
+                new Product{ProductId=2,CategoryId=2, ProductName="Samsung", QuantityPerUnit="4GbRam",UnitPrice=5000,UnitsInStock=5},
+                new Product{ProductId=2,CategoryId=2, ProductName="Apple", QuantityPerUnit="4GbRam",UnitPrice=8000,UnitsInStock=0},
 
 
 
@@ -37,16 +37,34 @@ namespace LINQ
 
             //AscDescTest(products);
 
+            //ClassicLinqTest(products);
+
+            var result = from p in products
+                         join c in categories
+                         on p.CategoryId equals c.CategoryId
+                         where p.UnitPrice>5000
+                         select new ProductDTO { ProductId = p.ProductId, CategoryName = c.CategoryName, ProductName = p.ProductName, UnitPrice = p.UnitPrice };
+            foreach (var productDTO in result)
+            {
+                Console.WriteLine("{0}------{1}",productDTO.ProductName,productDTO.CategoryName);
+            }
+
+
+
+
+
+        }
+
+        private static void ClassicLinqTest(List<Product> products)
+        {
             var result = from p in products
                          where p.UnitPrice > 6000
                          orderby p.UnitPrice descending, p.ProductName ascending
-                         select p;
+                         select new ProductDTO { ProductId = p.ProductId, ProductName = p.ProductName, UnitPrice = p.UnitPrice };
             foreach (var product in result)
             {
                 Console.WriteLine(product.ProductName);
             }
-
-
         }
 
         private static void AscDascTest(List<Product> products)
@@ -122,6 +140,15 @@ namespace LINQ
 
         }
 
+        class ProductDTO
+        {
+            public int ProductId { get; set; }
+            public string CategoryName { get; set; }
+            public string ProductName { get; set; }
+            public decimal UnitPrice { get; set; }
+
+
+        }
 
 
 
